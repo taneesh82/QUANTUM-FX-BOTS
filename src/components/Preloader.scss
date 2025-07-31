@@ -1,0 +1,57 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(120deg, #0e1536 60%, #2b3560 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s;
+  will-change: opacity, transform;
+  min-height: 100vh;
+}
+
+.preloader-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.preloader-logo {
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #13f2fe;
+  filter: drop-shadow(0 0 12px #13f2fe80);
+  text-shadow: 0 0 32px #13f2fe99, 0 0 2px #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  user-select: none;
+}
+
+.fx-glow {
+  color: #c084fc;
+  text-shadow: 0 0 18px #c084fc, 0 0 32px #fff0;
+  margin-left: 0.1em;
+}
+
+.preloader-progress-bar-bg {
+  width: 240px;
+  height: 9px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 0 18px #13f2fe55;
+  margin-top: 1.2em;
+}
+
+.preloader-progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #13f2fe 40%, #c084fc 100%);
+  border-radius: 7px;
+  box-shadow: 0 0 24px #13f2fe80;
+  transition: width 0.3s;
+}

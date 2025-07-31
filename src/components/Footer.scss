@@ -1,0 +1,101 @@
+.footer {
+  width: 100vw;
+  position: relative;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  min-height: 140px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden;
+}
+
+.footer-bg-particles {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  width: 95vw;
+  max-width: 1100px;
+  margin: 0 auto 1.2em auto;
+  padding: 2.3em 1.4em 1.5em 1.4em;
+  border-radius: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+  background: rgba(20,30,50,0.24);
+  box-shadow: 0 0 28px #13f2fe22, 0 0 13px #c084fc22;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 0.5em;
+  .footer-link {
+    color: #13f2fe;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 1.07em;
+    text-shadow: 0 0 8px #13f2fe55;
+    transition: color 0.18s, text-shadow 0.18s;
+    &:hover, &:focus {
+      color: #c084fc;
+      text-shadow: 0 0 18px #c084fc99;
+      outline: none;
+    }
+  }
+}
+.footer-socials {
+  display: flex;
+  gap: 1.1em;
+  margin-bottom: 0.7em;
+  .footer-social-glow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+    border-radius: 50%;
+    background: rgba(20,30,60,0.13);
+    color: #13f2fe;
+    font-size: 1.4em;
+    box-shadow: 0 0 0 transparent;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    &:hover, &:focus {
+      background: #13f2fe;
+      color: #191a2a;
+      box-shadow: 0 0 22px #13f2fe99;
+      outline: none;
+    }
+  }
+}
+.footer-note {
+  color: #f7faff99;
+  font-size: 0.98em;
+  text-align: center;
+  margin-top: 0.2em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 5px #13f2fe33;
+}
+
+@media (max-width: 700px) {
+  .footer-content {
+    padding: 1.3em 0.5em 1.1em 0.5em;
+  }
+  .footer-nav {
+    gap: 1.2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    .footer-link { font-size: 1em; }
+  }
+  .footer-socials { gap: 0.5em; }
+}

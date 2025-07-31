@@ -1,0 +1,211 @@
+.contact-payment-section {
+  position: relative;
+  width: 100vw;
+  padding: 6rem 0 4.5rem 0;
+  background: transparent;
+  overflow: hidden;
+  z-index: 5;
+  @media (max-width: 700px) {
+    padding: 2.6rem 0 2rem 0;
+  }
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #13f2fe;
+  text-shadow: 0 0 16px #13f2fe55;
+  margin-bottom: 2.1rem;
+  .accent {
+    color: #c084fc;
+    text-shadow: 0 0 18px #c084fc;
+  }
+}
+
+.contact-payment-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.7rem;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2.4rem 2rem;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.3rem 0.7rem;
+  }
+}
+
+.contact-form {
+  flex: 1.1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  label {
+    font-size: 1.08em;
+    color: #f7faffcc;
+    font-weight: 500;
+    margin-bottom: 0.15em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  input, textarea {
+    background: rgba(20, 30, 60, 0.18);
+    border: 1.2px solid #c084fc50;
+    border-radius: 1.1em;
+    color: #13f2fe;
+    font-size: 1em;
+    padding: 0.7em 1.1em;
+    outline: none;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    transition: border 0.23s, box-shadow 0.20s;
+    box-shadow: 0 0 0 transparent;
+    &:focus {
+      border: 1.5px solid #13f2fe;
+      box-shadow: 0 0 16px #13f2fe88;
+      background: rgba(19,242,254,0.09);
+      color: #c084fc;
+    }
+  }
+  textarea {
+    resize: none;
+    min-height: 88px;
+  }
+  .btn-contact-glow {
+    margin-top: 0.5em;
+    font-size: 1.13em;
+    padding: 0.7em 1.6em;
+    border-radius: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #13f2fe 40%, #c084fc 100%);
+    color: #191a2a;
+    box-shadow: 0 0 18px #13f2fe99, 0 0 36px #c084fc44;
+    filter: brightness(1.1);
+    cursor: pointer;
+    transition: filter 0.19s, box-shadow 0.19s, transform 0.18s;
+    &:hover, &:focus {
+      filter: brightness(1.19);
+      box-shadow: 0 0 32px #13f2fe, 0 0 46px #c084fc99;
+      transform: scale(1.04);
+    }
+  }
+}
+
+.payment-options {
+  flex: 1.1;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1em;
+  @media (max-width: 600px) {
+    gap: 0.9em;
+  }
+}
+
+.payment-block {
+  background: rgba(20,30,60,0.14);
+  border-radius: 1.1em;
+  padding: 1.1em 1em 1.2em 1em;
+  box-shadow: 0 0 18px #13f2fe33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-size: 1.11em;
+    font-weight: 700;
+    color: #13f2fe;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.01em;
+    text-shadow: 0 0 10px #13f2fe55;
+  }
+}
+.upi-qr-glass {
+  background: rgba(255,255,255,0.15);
+  border-radius: 1.1em;
+  padding: 0.6em;
+  box-shadow: 0 0 14px #13f2fe44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upi-qr-img {
+  width: 142px;
+  height: 142px;
+  object-fit: contain;
+  border-radius: 1em;
+  filter: drop-shadow(0 0 10px #13f2fe77);
+  background: #fff;
+}
+
+.crypto-wallets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.crypto-wallet {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  background: rgba(19,242,254,0.07);
+  border-radius: 1.1em;
+  padding: 0.5em 0.8em;
+  box-shadow: 0 0 8px #13f2fe33;
+  transition: box-shadow 0.18s, background 0.18s;
+  .crypto-icon {
+    filter: drop-shadow(0 0 8px #13f2fe88);
+    font-size: 1.7em;
+    margin-right: 0.2em;
+  }
+  .crypto-label {
+    color: #13f2fe;
+    font-weight: 700;
+    margin-right: 0.2em;
+  }
+  .crypto-address {
+    color: #c084fc;
+    font-family: monospace;
+    font-size: 0.93em;
+    word-break: break-all;
+    background: #111a3a55;
+    border-radius: 0.6em;
+    padding: 0.17em 0.5em;
+    margin-left: 0.2em;
+    box-shadow: 0 0 6px #c084fc55;
+  }
+}
+
+.contact-socials {
+  margin-top: 2.9em;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  a.social-glow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em;
+    margin: 0 0.4em;
+    border-radius: 50%;
+    background: rgba(20,30,60,0.13);
+    color: #13f2fe;
+    font-size: 1.7em;
+    box-shadow: 0 0 0 transparent;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    &:hover, &:focus {
+      background: #13f2fe;
+      color: #191a2a;
+      box-shadow: 0 0 22px #13f2fe99;
+      outline: none;
+    }
+  }
+}

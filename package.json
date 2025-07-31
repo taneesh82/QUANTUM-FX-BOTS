@@ -1,0 +1,23 @@
+{
+  "name": "quantum-fx",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4",
+    "phosphor-react": "^2.0.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@splinetool/react-spline": "^1.2.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.1.0",
+    "sass": "^1.69.0",
+    "vite": "^4.5.0"
+  }
+}
