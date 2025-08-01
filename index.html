@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum FX - AI-Powered Forex Trading Bots</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0A0A0F;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Preloader Styles */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #0A0A0F;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .preloader__logo {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #00f7ff, #2979ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(0, 247, 255, 0.3));
+        }
+        
+        .preloader__bar-container {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .preloader__bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #00f7ff, #2979ff);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+        }
+        
+        /* Main Content Initial Styles */
+        .main-content {
+            opacity: 0;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__logo">Quantum FX</div>
+        <div class="preloader__bar-container">
+            <div class="preloader__bar"></div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Content will be added in subsequent commits -->
+    </main>
+    
+    <script>
+        // Register GSAP ScrollTrigger Plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Initialize Locomotive Scroll
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            lerp: 0.05
+        });
+        
+        // Update ScrollTrigger on Locomotive Scroll update
+        scroll.on('scroll', ScrollTrigger.update);
+        
+        // Preloader Animation
+        window.addEventListener('load', () => {
+            const tl = gsap.timeline();
+            
+            // Animate progress bar
+            tl.to('.preloader__bar', {
+                width: '100%',
+                duration: 2,
+                ease: 'power2.inOut'
+            })
+            
+            // Fade out preloader
+            .to('.preloader', {
+                opacity: 0,
+                duration: 0.5,
+                ease: 'power2.inOut',
+                onComplete: () => {
+                    document.querySelector('.preloader').style.display = 'none';
+                }
+            })
+            
+            // Fade in main content
+            .to('.main-content', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            });
+        });
+    </script>
+</body>
+</html>
